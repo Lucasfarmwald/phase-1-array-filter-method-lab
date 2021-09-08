@@ -8,6 +8,13 @@ function findMatching(drivers, name){
 
 function fuzzyMatch(driver,item){
     return driver.filter(function(words){
-      return item.length === words.length
+      return item.charAt(0) === words.charAt(0)
     })
+}
+
+
+function matchName(driver1, item1) {
+  return driver1.filter(function(word1){
+      return item1 === word1
+  })
 }
